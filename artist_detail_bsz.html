@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Soop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/artist_detail_bsz.css" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/artist_detail.js"></script> 
+    <script src="js/jquery.mousewheel.min.js"></script>
+  </head>
+
+  <body>  
+    <div id="wrap">
+      <!-- [1] 헤더 -->
+      <header id="header">
+        <div class="mn_container">
+          <a href="#" class="nav_mn">
+            <!-- <img src="images/navmn_open.png" alt=""/> -->
+          </a>
+          <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+          <div class="language">
+            <a href="login.html"><span style="color: white;">Login&nbsp;&nbsp;|</span></a>
+            <a href="join_1.html"><span style="color: white;">Join&nbsp;</span></a>
+          </div>
+        </div>
+      </header>
+      <!-- 메뉴 -->
+      <nav>
+        <div class="menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+          <div class="line line__3"></div>
+        </div>
+      
+        <div class="sub-menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+        </div>
+      
+        <ul class="nav-links">
+          <li class="link">
+            <a href="index.html">Main</a>
+          </li>
+          <li class="link">
+            <a href="Introduce.html">Company</a>
+          </li>
+          <li class="link">
+            <a href="#">Artist</a>
+            <ol>
+              <li><a href="artist_detail_gy.html">공유</a></li>
+              <li><a href="#">공효진</a></li>
+              <li><a href="#">김재욱</a></li>
+              <li><a href="artist_detail_shj.html">서현진</a></li>
+              <li><a href="#">이천희</a></li>
+              <li><a href="#">전도연</a></li>
+              <li><a href="#">정유미</a></li>
+              <li><a href="#">남지현</a></li>
+              <li><a href="#">최우식</a></li>
+              <li><a href="artist_detail_bsz.html">수지</a></li>
+              <li><a href="#">남주혁</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">Community</a>
+            <ol>
+              <li><a href="NewsNotice.html">News & Notice</a></li>
+              <li><a href="works.html">Works</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">SNS</a>
+            <ol>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/soopent">
+                  Facebook <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/management_soop/">
+                  Instagram <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/channel/UCPWLltIuHLCws1-O3B4ADtg">
+                  Youtube <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.vlive.tv/channel/EBE269">
+                  Vlive <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://tv.naver.com/soopent">
+                  Naver Tv <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li class="link">
+          </li>
+          <li class="link">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="link">
+            <a href="join_1.html">Join</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- [2] 메인화면 -->
+      
+      <section id="main">
+        <!-- [2-0] 고정된 배경(아티스트 사진) -->
+        <!-- 잠시 삭제 -->
+        <div class="artist_bg_img"></div>
+        <!-- [2-1] 아티스트 profile-->
+       <div class="page index">
+        <article id="art_profile">
+          <!-- all artists 뒤로가기 버튼 -->
+          <a href="#" class="back_btn">
+            <div class="icon_box">
+              <img src="images/goback_all_artists.png" alt="" />
+            </div>        
+            <span>ALL&nbsp;ARTISTS</span>
+          </a>      
+          <!-- (테스트임시) 페이지 넘기기버튼 -->
+          <div class="profile_wrap">
+            <div class="first_p"></div>
+            <ul class="contents_container"> 
+              <!-- 두번째 영역 -->
+              <li class="second_p">
+                <!-- 페이지 넘기기버튼 -->
+                <div id="change_p">
+                  <span class="next_p">>></span>
+                  <span class="prev_p"><<</span>
+                  <!-- <img src="images/profile_pagechangebtn.png" alt=""> -->
+                </div>
+                <!-- sns 버튼 -->
+                <ul class="sns_link">
+                  <li><a href="#">
+                    
+                    <span>&nbsp;INSTAGRAM</span>
+                    <img src="images/insta_icon.png" alt="">
+                  </a></li>
+                  <li><a href="#">
+                    
+                    <span>&nbsp;TWITTER</span>
+                    <img src="images/twitter_icon.png" alt="">
+                  </a></li>
+                </ul>
+                <!-- 언어 전환 버튼 -->
+                <ul class="lan_change">
+                  <li><a href="#" class="on">KOR</a></li>
+                  <li>/</li>
+                  <li><a href="#">ENG</a></li>
+                </ul>
+                <!-- 여기부터 -->
+                <!-- 이름, 생년월일, 데뷔 -->
+              <div class="name_birth">
+                <h3 class="name">
+                  배수지
+                  <span>Suzy</span>
+                </h3>
+                <p class="birth">1994. 10. 10</p>
+                <p class="debut">
+                  데뷔 | 미쓰에이 싱글 앨범 [Bad But Good] (2010)
+                </p>
+              </div>
+              <!-- 활동 작품 -->
+              <div class="works">
+                <h3 class="title">활동</h3>
+                <ul class="works_list">
+                  <li class="movie">
+                    <h4>영화</h4>
+                    <p>
+                      안녕(2011) 건축학개론(2012) 도리화가(2015) 백두산(2019)
+                    </p>
+                  </li>
+                  <li class="drama">
+                    <h4>드라마</h4>
+                    <p>
+                      드림하이(KBS, 2011) 드라마스페셜-휴먼 카지노(KBS, 2011)
+                      빅(KBS, 2012) 구가의 서(MBC, 2013) 함부로 애틋하게(KBS,
+                      2016) 당신이 잠든 사이에(SBS, 2017) 배가본드(SBS, 2019)
+                      스타트업(tvN, 2020)
+                    </p>
+                  </li>
+                  <li class="tv">
+                    <h4>TV</h4>
+                    <p>
+                      쇼! 음악중심(MBC, 2010-2011) 청춘불패(KBS, 2011-2012)<br />
+                      STAR N' the CITY(XtvN, 2012) 오프더레코드,수지(딩고, 2017)
+                    </p>
+                  </li>
+                </ul>
+              </div>
+                <!-- 여기까지 -->
+              </li>
+              <!-- 세번째 영역 -->
+              <li class="third_p">
+                <!-- 수상내역 -->
+              <div class="awards_list">
+                <h3 class="ttl">
+                  수상내역
+                </h3>
+                <p class="awards_detail" >
+                  제16회 서울드라마어워즈 TV한류드라마 여자배우상 (2021)<br>
+                  SBS 연기대상 미니시리즈 여자 최우수연기상(2019)<br>
+                  SBS 연기대상 한류콘텐츠상(2019)<br>
+                  SBS 연기대상 베스트 커플상(2019)<br>
+                  아시아 아티스트 어워즈 아시아 셀러브리티상(2018)<br>
+                  제54회 백상예술대상 여자 인기상(2018)<br>
+                  SBS 연기대상 수목드라마부문 여자 최우수연기상(2017)<br>
+                  SBS 연기대상 베스트 커플상(2017)<br>
+                  아시아 아티스트 어워즈 아시아 스타상(2017)<br>
+                  제31회 골든디스크 어워즈 디지털음원부문 본상(2017)<br>
+                  Mnet 아시안 뮤직 어워드 베스트 콜라보레이션(2016)<br>
+                  제8회 멜론뮤직어워드 뮤직스타일상 알앤비소울 부문(2016)<br>
+                  아시아 아티스트 어워즈 드라마부문 베스트 스타상(2016)<br>
+                  제52회 백상예술대상영화부문 여자 인기상(2016)<br>
+                  제52회 백상예술대상 인스타일 베스트 스타일상(2016)<br>
+                  2014 웨이보의 밤 올해의 여신상(2015)<br>
+                  MBC 연기대상 미니시리즈부문 여자 최우수연기상(2013)<br>
+                  MBC 연기대상 베스트 커플상(2013)<br>
+                  한국광고주대회 광고주가 뽑은 좋은 모델상(2013)<br>
+                  제8회 서울드라마어워즈 한류드라마 여자배우상(2013)<br>
+                  제7회 Mnet 20's Choice 여자 20's 드라마 스타상(2013)<br>
+                  KBS 연기대상 여자 인기상(2012)<br>
+                  제11회 KBS 연예대상 쇼오락부문 여자신인상(2012)<br>
+                  제33회 청룡영화상 인기스타상(2012)<br>
+                  제5회 스타일아이콘어워즈 본상(2012)<br>
+                </p>
+                
+              </div>
+              </li>
+            </ul>
+          </div>                
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-2] 아티스트 photo -->
+        <article id="art_photo">
+         <div id="photo_box">
+           <ul>
+             <li class="first">
+               <ul class="row1">
+                 <li><a href="#"><img src="images/SuZy/1.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/2.jfif" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/3.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/4.jpg" alt=""></a></li>
+                </ul>
+                <ul class="row2">
+                  <li><a href="#"><img src="images/SuZy/5.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/SuZy/6.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/SuZy/7.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/SuZy/8.jpg" alt=""></a></li>
+                </ul>
+             </li>
+             <li class="second">
+              <ul class="row1">
+                <li><a href="#"><img src="images/SuZy/9.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/10.jfif" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/11.jfif" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/12.jpg" alt=""></a></li>
+               </ul>
+               <ul class="row2">
+                 <li><a href="#"><img src="images/SuZy/13.jfif" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/14.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/15.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/16.jpg" alt=""></a></li>
+               </ul>
+             </li>
+             <li class="third">
+              <ul class="row1">
+                <li><a href="#"><img src="images/SuZy/17.jfif" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/18.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/19.jfif" alt=""></a></li>
+                <li><a href="#"><img src="images/SuZy/20.jpg" alt=""></a></li>
+               </ul>
+               <ul class="row2">
+                 <li><a href="#"><img src="images/SuZy/4.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/1.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/1.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SuZy/1.jpg" alt=""></a></li>
+               </ul>
+             </li>
+           </ul>
+         </div>
+         
+          <!-- 이전, 다음 버튼 -->
+          <a href="#" class="prev"
+            ><img src="images/photo_prev.png" alt=""
+          /></a>
+          <a href="#" class="next"
+            ><img src="images/photo_next.png" alt=""
+          /></a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-3] 아티스트 video -->
+        <article id="art_video">
+          <iframe
+            class="main_video"
+            width="740"
+            height="415"
+            src="https://www.youtube.com/embed/X9Mma8JoASs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <ul class="video_opts">
+            <li>
+              <a href="#">
+                <iframe
+                  width="285"
+                  height="160"
+                  src="https://www.youtube.com/embed/d8n_7z2kdvU"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <iframe
+                      width="285"
+                      height="160"
+                      src="https://www.youtube.com/embed/fMepe_sNMSw"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen="allowfullscreen">
+                  </iframe>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <iframe
+                  width="285"
+                  height="160"
+                  src="https://www.youtube.com/embed/ToAD3tNd2Ck"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="allowfullscreen">
+                </iframe>
+              </a>
+            </li>
+          </ul>
+          <!-- 유튜브 채널 링크 버튼 -->
+          <a href="https://www.youtube.com/c/MANAGEMENTSOOP" class="go_to_youtube">
+            <img src="images/youtube_link_btn.png" alt="" />
+            <p>More Videos</p>
+            <p>유튜브 채널 가기</p>
+          </a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-4] 아티스트 news -->
+        <article id="art_news">
+          <ul class="news_list">
+            <!-- 첫번째 기사 -->
+            <li class="first">
+              <a href="http://www.ktnews.com/news/articleView.html?idxno=121588">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SuZy/article_1.jpg" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>게스, ‘수지 하이넥 푸퍼’ 판매 열기 뜨겁다</h3>
+                  <p>
+                    토털 라이프 스타일 브랜드 게스(GUESS)에서 선보 인 ‘수지
+                    하이넥 푸퍼’가 올겨울 잇 아이템으로 등극 하며 뜨거운 열기다.
+                    지난 가을 서울스토어와 진행 한 ‘수지 뽀글이’ 플리스점퍼 초도
+                    물량 완판에 이 어, ‘수지 하이넥 푸퍼’ 가 프리오더 기간 내내
+                    뜨거 운 반응을 보였다는 평가다...
+                  </p>
+                  <span>2021.11.16</span>
+                </div>
+              </a>
+            </li>
+            <!-- 두번쨰 기사 -->
+            <li class="second">
+              <a href="https://www.notepet.co.kr/news/article/article_view/?idx=23715&groupCode=AB800AD810">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SuZy/article_2.jpg" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>수지, 반려견 '데지'와 생일 선물 인증샷 찰칵.."고마워요"</h3>
+                  <p>
+                    그룹 미쓰에이(miss A) 출신 배우 수지가 반려견 '데지'와 함께 생일을 맞아 감사 인사를 전했다. 지난 10일 수지는 자신의 인스타그램에
+                    "생일 축하해 주신 모든 우리 수위티들 고마워요.♡ 힘내서 촬영해야지"라는 글과 함께 사진을 게재했다. 공개된 사진 속에서 수지는 팬들이...
+                  </p>
+                  <span>2021.11.16</span>
+                </div>
+              </a>
+            </li>
+            <!-- 세번쨰 기사 -->
+            <li class="third">
+              <a href="http://enews.imbc.com/News/RetrieveNewsInfo/328499">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SuZy/article_3.jpg" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>수지, SDA '한류드라마 여자연기자 부문' 수상</h3>
+                  <p>
+                      배우 수지가 21일 오후 서울 상암 MBC 공개홀에서 진행된 '서울드라마어워즈 2021'에서 한류 드라마 여자연기자상을 수상했다. 한편,
+                      박은빈, 차은우의 사회로 진행된 시상식은 MBC와 유튜브 '서울드라마어워즈' 공식 채널을 통해 실시간으로 중계된다.
+                  </p>
+                  <span>2021.11.16</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
+      
+      </section>
+    </div>
+      <!-- 컨텐츠 퀵메뉴 (오른쪽 고정)-->
+      <ul id="art_quick_mn">
+        <li><a href="#">
+          <div></div> 
+          <span>PROFILE</span>                  
+        </a></li>
+        <li><a href="#">
+          <div></div>
+          <span>PHOTO</span>           
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>VIDEO</span>          
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>NEWS</span>       
+        </a></li>
+      </ul>
+    
+    
+  </div>
+    <script>
+      //현재 움직이는 상황 여부 점검하는 변수
+      var moving =false;
+      //현재 카테고리 번호를 나타내는 변수
+      var num = 0;
+
+      function doLayout() {
+          var t = window.innerHeight * -1 * num;
+
+          $("#main").css({top:t+"px"});
+          $("#main .page").css({width:window.innerWidth, height:window.innerHeight}).removeClass("loading");
+      }
+
+      $(document).ready(function(){
+          doLayout();
+
+          $("#art_quick_mn li").eq(num).find("div").addClass("on");
+          $("#art_quick_mn li").eq(num).find("span").addClass("on");
+
+          $("#main").mousewheel(function(e){
+              if(!moving){
+                  moving=true;
+                  var t = $(this).offset().top;
+                  var h = window.innerHeight;
+                  if(e.deltaY == -1){
+                    //위로 휠
+                      if(num < 3) {
+                        if(num == 1) {
+
+                        }
+                          num += 1;
+                          t-=h;
+                      }
+                  } else if(e.deltaY == 1) {
+                    //아래로 휠
+                      if(num > 0) {
+                          num -= 1;
+                          t+=h;
+                      }
+                  }
+
+                  $("#main").animate({top:t+"px"}, 500, function() {
+                    moving=false;
+                    $("#art_quick_mn div").removeClass("on");
+                    $("#art_quick_mn span").removeClass("on");
+                    $("#art_quick_mn li").eq(num).find("div").addClass("on");                 
+                    $("#art_quick_mn li").eq(num).find("span").addClass("on");
+                  });
+              }
+          });
+
+      });
+      
+          // 메뉴움직임
+    console.clear();
+
+const nav = document.querySelector("nav");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = [...document.querySelectorAll(".link")];
+const menuBtn = document.querySelector(".menu-btn");
+const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+function createHoverEl() {
+  let hoverEl = document.createElement("div");
+  hoverEl.className = "hover-el";
+  hoverEl.style.setProperty("--y", "0px");
+  hoverEl.style.setProperty("--mousex", "0px");
+  hoverEl.style.setProperty("--mousey", "0px");
+  navLinksContainer.appendChild(hoverEl);
+}
+createHoverEl();
+
+navLinks.forEach((link, index) => {
+  let hoverEl = navLinksContainer.querySelector(".hover-el");
+  link.style.setProperty("--delay", `${index * 50}ms`);
+  link.addEventListener("mousemove", function(e) {
+    hoverEl.style.setProperty("--y", `${index * 60}px`);
+    hoverEl.style.setProperty("opacity", "1");
+    hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+    hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+  });
+  navLinksContainer.addEventListener("mouseout", function() {
+    hoverEl.style.setProperty("opacity", "0");
+  });
+  link.addEventListener("click", function() {
+    let hoverEl = navLinksContainer.querySelector(".hover-el");
+    hoverEl.style.opacity = '0';
+    toggleSubmenu(link);
+  });
+});
+
+menuBtn.addEventListener("click", function() {
+  nav.classList.toggle("nav-open");
+  menuBtn.classList.toggle("close");
+});
+subMenuBtn.addEventListener("click", function() {
+  nav.classList.toggle("sub-menu-open");
+  removeSubmenu();
+});
+
+function toggleSubmenu(el) {
+  let subMenu = nav.querySelector(".sub-menu");
+  if (el.children[1]) {
+    createSubmenu(el);
+  } else if (nav.contains(subMenu)) {
+    removeSubmenu();
+  } else {
+    return;
+  }
+}
+
+function createSubmenu(el) {
+  let subMenuContainer = document.createElement("div");
+  subMenuContainer.className = "sub-menu";
+  let subMenuItem = el.children[1].cloneNode(true);
+  let subMenuItemList = [...subMenuItem.children];
+  subMenuItemList.forEach((item, index) => {
+    item.classList.add("off-menu");
+    item.style.setProperty("--delay", `${index * 40}ms`);
+  });
+  nav.classList.toggle("sub-menu-open");
+  nav.appendChild(subMenuContainer);
+  subMenuContainer.appendChild(subMenuItem);
+  setTimeout(function() {
+    subMenuItemList.forEach(item => {
+      item.classList.remove("off-menu");
+      item.classList.add("on-menu");
+    });
+  }, 200);
+}
+function removeSubmenu() {
+  let subMenu = nav.querySelector(".sub-menu");
+  let subMenuItemList = [...subMenu.children[0].children];
+  if (nav.contains(subMenu)) {
+    subMenuItemList.forEach(item => {
+      item.classList.add("off-menu");
+      item.classList.remove("on-menu");
+    });
+    setTimeout(function() {
+      nav.removeChild(subMenu);
+    }, 500);
+  }
+}
+    </script>
+   
+  </body>
+</html>

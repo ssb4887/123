@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Soop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/artist_detail_gy.css" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/artist_detail.js"></script> 
+    <script src="js/jquery.mousewheel.min.js"></script>
+  </head>
+
+  <body>  
+    <div id="wrap">
+      <!-- [1] 헤더 -->
+      <header id="header">
+        <div class="mn_container">
+          <a href="#" class="nav_mn">
+            <!-- <img src="images/navmn_open.png" alt=""/> -->
+          </a>
+          <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+          <div class="language">
+            <a href="login.html"><span style="color: white;">Login&nbsp;&nbsp;|</span></a>
+            <a href="join_1.html"><span style="color: white;">Join&nbsp;</span></a>
+          </div>
+        </div>
+      </header>
+      <!-- 메뉴 -->
+      <nav>
+        <div class="menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+          <div class="line line__3"></div>
+        </div>
+      
+        <div class="sub-menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+        </div>
+      
+        <ul class="nav-links">
+          <li class="link">
+            <a href="index.html">Main</a>
+          </li>
+          <li class="link">
+            <a href="Introduce.html">Company</a>
+          </li>
+          <li class="link">
+            <a href="#">Artist</a>
+            <ol>
+              <li><a href="artist_detail_gy.html">공유</a></li>
+              <li><a href="#">공효진</a></li>
+              <li><a href="#">김재욱</a></li>
+              <li><a href="artist_detail_shj.html">서현진</a></li>
+              <li><a href="#">이천희</a></li>
+              <li><a href="#">전도연</a></li>
+              <li><a href="#">정유미</a></li>
+              <li><a href="#">남지현</a></li>
+              <li><a href="#">최우식</a></li>
+              <li><a href="artist_detail_bsz.html">수지</a></li>
+              <li><a href="#">남주혁</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">Community</a>
+            <ol>
+              <li><a href="NewsNotice.html">News & Notice</a></li>
+              <li><a href="works.html">Works</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">SNS</a>
+            <ol>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/soopent">
+                  Facebook <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/management_soop/">
+                  Instagram <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/channel/UCPWLltIuHLCws1-O3B4ADtg">
+                  Youtube <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.vlive.tv/channel/EBE269">
+                  Vlive <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://tv.naver.com/soopent">
+                  Naver Tv <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li class="link">
+          </li>
+          <li class="link">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="link">
+            <a href="join_1.html">Join</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- [2] 메인화면 -->
+      
+      <section id="main">
+        <!-- [2-0] 고정된 배경(아티스트 사진) -->
+        <!-- 잠시 삭제 -->
+        <div class="artist_bg_img"></div>
+        <!-- [2-1] 아티스트 profile-->
+       <div class="page index">
+        <article id="art_profile">
+          <!-- all artists 뒤로가기 버튼 -->
+          <a href="#" class="back_btn">
+            <img src="images/goback_all_artists.png" alt="" />
+            <span>ALL&nbsp;ARTISTS</span>
+          </a>      
+          <!-- (테스트임시) 페이지 넘기기버튼 -->
+          <div class="profile_wrap">
+            <div class="first_p"></div>
+            <ul class="contents_container"> 
+              <!-- 두번째 영역 -->
+              <li class="second_p">
+                <!-- 페이지 넘기기버튼 -->
+                <div id="change_p">
+                  <span class="next_p">>></span>
+                  <span class="prev_p"><<</span>
+                  <!-- <img src="images/profile_pagechangebtn.png" alt=""> -->
+                </div>
+                <!-- sns 버튼 -->
+                <ul class="sns_link">
+                  <li><a href="#">
+                    
+                    <span>&nbsp;INSTAGRAM</span>
+                    <img src="images/insta_icon.png" alt="">
+                  </a></li>
+                  <li><a href="#">
+                    
+                    <span>&nbsp;TWITTER</span>
+                    <img src="images/twitter_icon.png" alt="">
+                  </a></li>
+                </ul>
+                <!-- 언어 전환 버튼 -->
+                <ul class="lan_change">
+                  <li><a href="#" class="on">KOR</a></li>
+                  <li>/</li>
+                  <li><a href="#">ENG</a></li>
+                </ul>
+                <!-- 여기부터 -->
+                 <!-- 이름, 생년월일, 데뷔 -->
+              <div class="name_birth">
+                <h3 class="name">
+                  공유
+                  <span>Gong Yoo</span>
+                </h3>
+                <p class="birth">1979. 07. 10</p>
+                <p class="debut">
+                  데뷔 |  드라마 학교4(KBS,2001)
+                </p>
+              </div>
+              <!-- 활동 작품 -->
+              <div class="works">
+                <h3 class="title">활동</h3>
+                <ul class="works_list">
+                  <li class="movie">
+                    <h4>영화</h4>
+                    <p>
+                        동갑내기 과외하기(2003) 그녀를 모르면 간첩(2004) 슈퍼스타 감사용(2004)
+                        S다이어리(2004) 잠복근무(2005) 용이 간다(2007) 김종욱 찾기(2010)
+                        도가니(2011) 용의자(2013) 남과 여(2016) 부산행(2016) 밀정(2016)
+                        82년생 김지영(2019) 서복(2021)
+                    </p>
+                  </li>
+                  <li class="drama">
+                    <h4>드라마</h4>
+                    <p>
+                        학교4(KBS, 2001) 언제나 두근두근(KBS, 2002) 거침없는 사랑(KBS, 2002)
+                        스무살(SBS, 2003) 스크린(SBS,2003) 건빵선생과 별사탕(SBS, 2005)
+                        어느 멋진 날(MBC, 2006) 커피 프린스 1호점(MBC, 2007) 빅(KBS, 2012)
+                        도깨비(tvN, 2016) 고요의 바다(넷플릭스,2021)
+                    </p>
+                  </li>
+                  <li class="tv">
+                    <h4>TV</h4>
+                    <p>
+                        음악캠프(MBC, 2004)
+                    </p>
+                  </li>
+                </ul>
+              </div>
+                <!-- 여기까지 -->
+              </li>
+              <!-- 세번째 영역 -->
+              <li class="third_p">
+                <!-- 수상내역 -->
+                <div class="awards_list">
+                    <h3 class="ttl">
+                      수상내역
+                    </h3>
+                    <p class="awards_detail" >
+                        제53회 백상예술대상 TV부문 남자 최우수연기상(2017)<br>
+                        제48회 납세자의 날 모범납세자 대통령표창(2014)<br>
+                        제32회 청룡영화제 인기스타상(2011)<br>
+                        MBC 연기대상 우수상(2007)<br>
+                        MBC 연기대상 미니시리즈 연기상(2006)<br>
+                        SBS 연기대상 뉴스타상(2003)
+                    </p>
+                    
+                  </div>
+                  <div class="awards_list">
+                    <h3 class="ttl">
+                      기타
+                    </h3>
+                    <p class="awards_detail" >
+                        국세청 홍보대사(2014)<br>
+                        유니세프 한국위원회 아동권리협약대표(2013~)
+                    </p>
+                    
+                  </div>
+              </li>
+            </ul>
+          </div>                
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-2] 아티스트 photo -->
+        <article id="art_photo">
+         <div id="photo_box">
+           <ul>
+            <li class="first">
+                <ul class="row1">
+                  <li><a href="#"><img src="images/GongYoo/8.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/10.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/11.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/12.jpg" alt=""></a></li>
+                 </ul>
+                 <ul class="row2">
+                   <li><a href="#"><img src="images/GongYoo/15.jpg" alt=""></a></li>
+                   <li><a href="#"><img src="images/GongYoo/20.jpg" alt=""></a></li>
+                   <li><a href="#"><img src="images/GongYoo/21.jpg" alt=""></a></li>
+                   <li><a href="#"><img src="images/GongYoo/22.jpg" alt=""></a></li>
+                 </ul>
+              </li>
+              <li class="second">
+               <ul class="row1">
+                 <li><a href="#"><img src="images/GongYoo/23.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/24.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/25.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/27.jpg" alt=""></a></li>
+                </ul>
+                <ul class="row2">
+                  <li><a href="#"><img src="images/GongYoo/28.PNG" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/29.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/30.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/31.jpg" alt=""></a></li>
+                </ul>
+              </li>
+              <li class="third">
+               <ul class="row1">
+                 <li><a href="#"><img src="images/GongYoo/32.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/33.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/34.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/GongYoo/35.jpg" alt=""></a></li>
+                </ul>
+                <ul class="row2">
+                  <li><a href="#"><img src="images/GongYoo/36.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/38.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/39.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/GongYoo/40.jpg" alt=""></a></li>
+                </ul>
+              </li>
+           </ul>
+         </div>
+         
+          <!-- 이전, 다음 버튼 -->
+          <a href="#" class="prev"
+            ><img src="images/photo_prev.png" alt=""
+          /></a>
+          <a href="#" class="next"
+            ><img src="images/photo_next.png" alt=""
+          /></a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-3] 아티스트 video -->
+        <article id="art_video">
+            <iframe class="main_video" width="740" height="415" src="https://www.youtube.com/embed/gzn-5VdmoG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <ul class="video_opts">
+              <li>
+                <a href="#">
+                  <iframe width="285" height="160" src="https://www.youtube.com/embed/dQQTwX2m4nw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <iframe width="285" height="160" src="https://www.youtube.com/embed/ARqnAi_-100?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <iframe width="285" height="160" src="https://www.youtube.com/embed/KfuGYZUNb9g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </a>
+              </li>
+            </ul>
+          <!-- 유튜브 채널 링크 버튼 -->
+          <a href="https://www.youtube.com/c/MANAGEMENTSOOP" class="go_to_youtube">
+            <img src="images/youtube_link_btn.png" alt="" />
+            <p>More Videos</p>
+            <p>유튜브 채널 가기</p>
+          </a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-4] 아티스트 news -->
+        <article id="art_news">
+          <ul class="news_list">
+           <!-- 첫번째 기사 -->
+           <li class="first">
+            <a href="https://www.insight.co.kr/news/370696">
+              <!-- 기사사진 -->
+              <div class="thumb">
+                <img src="images/GongYoo/article_2.PNG" alt="" />
+              </div>
+              <!-- 기사내용 -->
+              <div class="news_letter">
+                <h3>데뷔 20년만에 인스타 만들고 화보같은 일상 공개하는 공유</h3>
+                <p>
+                  배우 공유가 데뷔 후 처음으로 인스타그램을 개설했다.
+                  1일 소속사 매니지먼트 숲은 공식 인스타그램을 통해
+                  "공유 배우를 항상 응원해주시는 팬 여러분 모두 감사드립니다.
+                  국내외 팬들에게 공유 배우의 일상을 전하고자 공식 인스타계정을
+                  오픈했습니다."라며 공유의...
+                </p>
+                <span>2021.12.01</span>
+              </div>
+            </a>
+          </li>
+          <!-- 두번쨰 기사 -->
+          <li class="second">
+            <a href="https://newsis.com/view/?id=NISX20211206_0001677017&cID=10401&pID=10400">
+              <!-- 기사사진 -->
+              <div class="thumb">
+                <img src="images/GongYoo/article_1.jpg" alt="" />
+              </div>
+              <!-- 기사내용 -->
+              <div class="news_letter">
+                <h3>배우 공유, 국민은행 'KB스타뱅킹' 광고모델 발탁</h3>
+               <p>
+                  배우 공유씨가 새로워진 KB스타뱅킹을 알리기 위해 KB국민은행과 손잡았다. 
+                  KB국민은행은 6일 KB스타뱅킹의 광고영상을 공개했다고 밝혔다.
+                  모든 연령층에서 호감도가 높은 공유씨는 탄탄한 연기력을 바탕으로 
+                  작품성 있는 영화와 드라마에 출연해 오랜 기간 대중에게 신뢰를 쌓아왔다...
+              </p>
+                <span>2021.12.06</span>
+              </div>
+            </a>
+          </li>
+          <!-- 세번쨰 기사 -->
+          <li class="third">
+            <a href="https://sports.donga.com/article/all/20211206/110625658/1">
+              <!-- 기사사진 -->
+              <div class="thumb">
+                <img src="images/GongYoo/article_3.jpg" alt="" />
+              </div>
+              <!-- 기사내용 -->
+              <div class="news_letter">
+                <h3>배두나, 공유 '고요의 바다' 스틸 공개</h3>
+                <p>
+                  넷플릭스(Netflix)의 ‘고요의 바다’가 우주복을 입고 
+                  인류 생존의 단서를 찾아 달로 향한 배두나와 공유의 
+                  캐릭터 스틸을 공개했다.
+                  넷플릭스 시리즈 ‘킹덤’과 영화 ‘부산행’으로 K-좀비 열풍을
+                   선도했던 배두나와 공유가 생애 처음 SF 미스터리 스릴러에
+                    도전해 연기 호흡을 맞춘다.
+                     ‘고요의 바다’는 필수 자원...
+               </p>
+                <span>2021.12.06</span>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </article>
+      
+      </section>
+    </div>
+      <!-- 컨텐츠 퀵메뉴 (오른쪽 고정)-->
+      <ul id="art_quick_mn">
+        <li><a href="#">
+          <div></div> 
+          <span>PROFILE</span>                  
+        </a></li>
+        <li><a href="#">
+          <div></div>
+          <span>PHOTO</span>           
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>VIDEO</span>          
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>NEWS</span>       
+        </a></li>
+      </ul>
+    
+    
+  </div>
+    <script>
+      //현재 움직이는 상황 여부 점검하는 변수
+      var moving =false;
+      //현재 카테고리 번호를 나타내는 변수
+      var num = 0;
+
+      function doLayout() {
+          var t = window.innerHeight * -1 * num;
+
+          $("#main").css({top:t+"px"});
+          $("#main .page").css({width:window.innerWidth, height:window.innerHeight}).removeClass("loading");
+      }
+
+      $(document).ready(function(){
+          doLayout();
+
+          $("#art_quick_mn li").eq(num).find("div").addClass("on");
+          $("#art_quick_mn li").eq(num).find("span").addClass("on");
+
+          $("#main").mousewheel(function(e){
+              if(!moving){
+                  moving=true;
+                  var t = $(this).offset().top;
+                  var h = window.innerHeight;
+                  if(e.deltaY == -1){
+                    //위로 휠
+                      if(num < 3) {
+                        if(num == 1) {
+
+                        }
+                          num += 1;
+                          t-=h;
+                      }
+                  } else if(e.deltaY == 1) {
+                    //아래로 휠
+                      if(num > 0) {
+                          num -= 1;
+                          t+=h;
+                      }
+                  }
+
+                  $("#main").animate({top:t+"px"}, 500, function() {
+                    moving=false;
+                    $("#art_quick_mn div").removeClass("on");
+                    $("#art_quick_mn span").removeClass("on");
+                    $("#art_quick_mn li").eq(num).find("div").addClass("on");                 
+                    $("#art_quick_mn li").eq(num).find("span").addClass("on");
+                  });
+              }
+          });
+
+      });
+      
+          // 메뉴움직임
+    console.clear();
+
+const nav = document.querySelector("nav");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = [...document.querySelectorAll(".link")];
+const menuBtn = document.querySelector(".menu-btn");
+const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+function createHoverEl() {
+  let hoverEl = document.createElement("div");
+  hoverEl.className = "hover-el";
+  hoverEl.style.setProperty("--y", "0px");
+  hoverEl.style.setProperty("--mousex", "0px");
+  hoverEl.style.setProperty("--mousey", "0px");
+  navLinksContainer.appendChild(hoverEl);
+}
+createHoverEl();
+
+navLinks.forEach((link, index) => {
+  let hoverEl = navLinksContainer.querySelector(".hover-el");
+  link.style.setProperty("--delay", `${index * 50}ms`);
+  link.addEventListener("mousemove", function(e) {
+    hoverEl.style.setProperty("--y", `${index * 60}px`);
+    hoverEl.style.setProperty("opacity", "1");
+    hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+    hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+  });
+  navLinksContainer.addEventListener("mouseout", function() {
+    hoverEl.style.setProperty("opacity", "0");
+  });
+  link.addEventListener("click", function() {
+    let hoverEl = navLinksContainer.querySelector(".hover-el");
+    hoverEl.style.opacity = '0';
+    toggleSubmenu(link);
+  });
+});
+
+menuBtn.addEventListener("click", function() {
+  nav.classList.toggle("nav-open");
+  menuBtn.classList.toggle("close");
+});
+subMenuBtn.addEventListener("click", function() {
+  nav.classList.toggle("sub-menu-open");
+  removeSubmenu();
+});
+
+function toggleSubmenu(el) {
+  let subMenu = nav.querySelector(".sub-menu");
+  if (el.children[1]) {
+    createSubmenu(el);
+  } else if (nav.contains(subMenu)) {
+    removeSubmenu();
+  } else {
+    return;
+  }
+}
+
+function createSubmenu(el) {
+  let subMenuContainer = document.createElement("div");
+  subMenuContainer.className = "sub-menu";
+  let subMenuItem = el.children[1].cloneNode(true);
+  let subMenuItemList = [...subMenuItem.children];
+  subMenuItemList.forEach((item, index) => {
+    item.classList.add("off-menu");
+    item.style.setProperty("--delay", `${index * 40}ms`);
+  });
+  nav.classList.toggle("sub-menu-open");
+  nav.appendChild(subMenuContainer);
+  subMenuContainer.appendChild(subMenuItem);
+  setTimeout(function() {
+    subMenuItemList.forEach(item => {
+      item.classList.remove("off-menu");
+      item.classList.add("on-menu");
+    });
+  }, 200);
+}
+function removeSubmenu() {
+  let subMenu = nav.querySelector(".sub-menu");
+  let subMenuItemList = [...subMenu.children[0].children];
+  if (nav.contains(subMenu)) {
+    subMenuItemList.forEach(item => {
+      item.classList.add("off-menu");
+      item.classList.remove("on-menu");
+    });
+    setTimeout(function() {
+      nav.removeChild(subMenu);
+    }, 500);
+  }
+}
+    </script>
+    
+
+  </body>
+</html>

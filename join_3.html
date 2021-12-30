@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Soop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/join_3.css" />
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- [1] 헤더 -->
+      <header id="header">
+        <div class="mn_container">
+          <a href="#" class="nav_mn">
+            <!-- <img src="images/navmn_open.png" alt=""/> -->
+          </a>
+          <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+          <div class="language">
+            <a href="login.html"><span>Login&nbsp;&nbsp;|</span></a>
+            <a href="join_1.html"><span>Join&nbsp;</span></a>
+          </div>
+        </div>
+      </header>
+      <!-- 메뉴 -->
+      <nav>
+        <div class="menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+          <div class="line line__3"></div>
+        </div>
+      
+        <div class="sub-menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+        </div>
+      
+        <ul class="nav-links">
+          <li class="link">
+            <a href="index.html">Main</a>
+          </li>
+          <li class="link">
+            <a href="Introduce.html">Company</a>
+          </li>
+          <li class="link">
+            <a href="#">Artist</a>
+            <ol>
+              <li><a href="artist_detail_gy.html">공유</a></li>
+              <li><a href="#">공효진</a></li>
+              <li><a href="#">김재욱</a></li>
+              <li><a href="artist_detail_shj.html">서현진</a></li>
+              <li><a href="#">이천희</a></li>
+              <li><a href="#">전도연</a></li>
+              <li><a href="#">정유미</a></li>
+              <li><a href="#">남지현</a></li>
+              <li><a href="#">최우식</a></li>
+              <li><a href="artist_detail_bsz.html">수지</a></li>
+              <li><a href="#">남주혁</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">Community</a>
+            <ol>
+              <li><a href="NewsNotice.html">News & Notice</a></li>
+              <li><a href="works.html">Works</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">SNS</a>
+            <ol>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/soopent">
+                  Facebook <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/management_soop/">
+                  Instagram <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/channel/UCPWLltIuHLCws1-O3B4ADtg">
+                  Youtube <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.vlive.tv/channel/EBE269">
+                  Vlive <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://tv.naver.com/soopent">
+                  Naver Tv <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li class="link">
+          </li>
+          <li class="link">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="link">
+            <a href="join_1.html">Join</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- [2] 메인화면 -->
+      <section id="join"> 
+        <!-- [2-0] 고정된 배경 -->
+        <div class="bg_img"></div>
+        <!-- [2-3] 가입완료-->
+        <article id="join_complete">
+          <div class="join_msg">
+            <h3>매니지먼트 숲 회원이 되신걸 환영합니다.</h3>
+            <p>앞으로도 소속배우들의 활발한 활동에<br>많은 관심 부탁드립니다.</p>
+            
+          </div>
+          <!-- 숲 아이콘 -->
+          <img class="forest_icon" src="images/join_forest.png" alt="">
+          
+          <!-- NEXT 버튼 -->
+          <input type="submit" class="next" value="HOME" onclick="location.href='index.html'"/>
+          <!-- 회원가입 진행 단계 표시 -->
+          <ul id="join_process">
+            <li>
+              <div class="process_icon"></div>
+              <span>약관동의</span>
+            </li>
+            <li>
+              <div class="process_icon"></div>
+              <span>회원정보 입력</span>
+            </li>
+            <li>
+              <div class="process_icon now"></div>
+              <span class="now">가입완료</span>
+            </li>
+          </ul>
+          <!-- 단계 잇는 선 -->
+          <div class="process_line"></div>
+        </article>
+      </section>
+    </div>
+  </body>
+  <script>
+         
+    // 메뉴움직임
+    console.clear();
+
+const nav = document.querySelector("nav");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = [...document.querySelectorAll(".link")];
+const menuBtn = document.querySelector(".menu-btn");
+const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+function createHoverEl() {
+let hoverEl = document.createElement("div");
+hoverEl.className = "hover-el";
+hoverEl.style.setProperty("--y", "0px");
+hoverEl.style.setProperty("--mousex", "0px");
+hoverEl.style.setProperty("--mousey", "0px");
+navLinksContainer.appendChild(hoverEl);
+}
+createHoverEl();
+
+navLinks.forEach((link, index) => {
+let hoverEl = navLinksContainer.querySelector(".hover-el");
+link.style.setProperty("--delay", `${index * 50}ms`);
+link.addEventListener("mousemove", function(e) {
+hoverEl.style.setProperty("--y", `${index * 60}px`);
+hoverEl.style.setProperty("opacity", "1");
+hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+});
+navLinksContainer.addEventListener("mouseout", function() {
+hoverEl.style.setProperty("opacity", "0");
+});
+link.addEventListener("click", function() {
+let hoverEl = navLinksContainer.querySelector(".hover-el");
+hoverEl.style.opacity = '0';
+toggleSubmenu(link);
+});
+});
+
+menuBtn.addEventListener("click", function() {
+nav.classList.toggle("nav-open");
+menuBtn.classList.toggle("close");
+});
+subMenuBtn.addEventListener("click", function() {
+nav.classList.toggle("sub-menu-open");
+removeSubmenu();
+});
+
+function toggleSubmenu(el) {
+let subMenu = nav.querySelector(".sub-menu");
+if (el.children[1]) {
+createSubmenu(el);
+} else if (nav.contains(subMenu)) {
+removeSubmenu();
+} else {
+return;
+}
+}
+
+function createSubmenu(el) {
+let subMenuContainer = document.createElement("div");
+subMenuContainer.className = "sub-menu";
+let subMenuItem = el.children[1].cloneNode(true);
+let subMenuItemList = [...subMenuItem.children];
+subMenuItemList.forEach((item, index) => {
+item.classList.add("off-menu");
+item.style.setProperty("--delay", `${index * 40}ms`);
+});
+nav.classList.toggle("sub-menu-open");
+nav.appendChild(subMenuContainer);
+subMenuContainer.appendChild(subMenuItem);
+setTimeout(function() {
+subMenuItemList.forEach(item => {
+item.classList.remove("off-menu");
+item.classList.add("on-menu");
+});
+}, 200);
+}
+function removeSubmenu() {
+let subMenu = nav.querySelector(".sub-menu");
+let subMenuItemList = [...subMenu.children[0].children];
+if (nav.contains(subMenu)) {
+subMenuItemList.forEach(item => {
+item.classList.add("off-menu");
+item.classList.remove("on-menu");
+});
+setTimeout(function() {
+nav.removeChild(subMenu);
+}, 500);
+}
+}
+</script>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Soop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/artist_detail_shj.css" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/artist_detail.js"></script> 
+    <script src="js/jquery.mousewheel.min.js"></script>
+  </head>
+
+  <body>  
+    <div id="wrap">
+      <!-- [1] 헤더 -->
+      <header id="header">
+        <div class="mn_container">
+          <a href="#" class="nav_mn">
+            <!-- <img src="images/navmn_open.png" alt=""/> -->
+          </a>
+          <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+          <div class="language">
+            <a href="login.html"><span style="color:white;">Login&nbsp;&nbsp;|</span></a>
+            <a href="join_1.html"><span style="color: white;">Join&nbsp;</span></a>
+          </div>
+        </div>
+      </header>
+      <!-- 메뉴 -->
+      <nav>
+        <div class="menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+          <div class="line line__3"></div>
+        </div>
+      
+        <div class="sub-menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+        </div>
+      
+        <ul class="nav-links">
+          <li class="link">
+            <a href="index.html">Main</a>
+          </li>
+          <li class="link">
+            <a href="Introduce.html">Company</a>
+          </li>
+          <li class="link">
+            <a href="#">Artist</a>
+            <ol>
+              <li><a href="artist_detail_gy.html">공유</a></li>
+              <li><a href="#">공효진</a></li>
+              <li><a href="#">김재욱</a></li>
+              <li><a href="artist_detail_shj.html">서현진</a></li>
+              <li><a href="#">이천희</a></li>
+              <li><a href="#">전도연</a></li>
+              <li><a href="#">정유미</a></li>
+              <li><a href="#">남지현</a></li>
+              <li><a href="#">최우식</a></li>
+              <li><a href="artist_detail_bsz.html">수지</a></li>
+              <li><a href="#">남주혁</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">Community</a>
+            <ol>
+              <li><a href="NewsNotice.html">News & Notice</a></li>
+              <li><a href="works.html">Works</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">SNS</a>
+            <ol>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/soopent">
+                  Facebook <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/management_soop/">
+                  Instagram <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/channel/UCPWLltIuHLCws1-O3B4ADtg">
+                  Youtube <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.vlive.tv/channel/EBE269">
+                  Vlive <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://tv.naver.com/soopent">
+                  Naver Tv <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li class="link">
+          </li>
+          <li class="link">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="link">
+            <a href="join_1.html">Join</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- [2] 메인화면 -->
+      
+      <section id="main">
+        <!-- [2-0] 고정된 배경(아티스트 사진) -->
+        <!-- 잠시 삭제 -->
+        <div class="artist_bg_img"></div>
+        <!-- [2-1] 아티스트 profile-->
+       <div class="page index">
+        <article id="art_profile">
+          <!-- all artists 뒤로가기 버튼 -->
+          <a href="#" class="back_btn">
+            <img src="images/goback_all_artists.png" alt="" />
+            <span>ALL&nbsp;ARTISTS</span>
+          </a>      
+          <!-- (테스트임시) 페이지 넘기기버튼 -->
+          <div class="profile_wrap">
+            <div class="first_p"></div>
+            <ul class="contents_container"> 
+              <!-- 두번째 영역 -->
+              <li class="second_p">
+                <!-- 페이지 넘기기버튼 -->
+                <div id="change_p">
+                  <span class="next_p">>></span>
+                  <span class="prev_p"><<</span>
+                  <!-- <img src="images/profile_pagechangebtn.png" alt=""> -->
+                </div>
+                <!-- sns 버튼 -->
+                <ul class="sns_link">
+                  <li><a href="#">
+                    
+                    <span>&nbsp;INSTAGRAM</span>
+                    <img src="images/insta_icon.png" alt="">
+                  </a></li>
+                  <li><a href="#">
+                    
+                    <span>&nbsp;TWITTER</span>
+                    <img src="images/twitter_icon.png" alt="">
+                  </a></li>
+                </ul>
+                <!-- 언어 전환 버튼 -->
+                <ul class="lan_change">
+                  <li><a href="#" class="on">KOR</a></li>
+                  <li>/</li>
+                  <li><a href="#">ENG</a></li>
+                </ul>
+                <!-- 여기부터 -->
+                <!-- 이름, 생년월일, 데뷔 -->
+                <div class="name_birth">
+                  <h3 class="name">
+                    서현진
+                    <span>Seo Hyunjin</span>
+                  </h3>
+                  <p class="birth">1985. 02. 27</p>
+                  <p class="debut">
+                    데뷔 | 밀크 1집 앨범 (2001)
+                  </p>
+                </div>
+             <!-- 활동 작품 -->
+             <div class="works">
+              <h3 class="title">활동</h3>
+              <ul class="works_list">
+                <li class="movie">
+                  <h4>영화</h4>
+                  <p>
+                      사랑따윈필요없어(2006) 스토리 오브 와인(2008) 유쾌한 도우미(2008) 요술(2010)
+                      창피해(2011) 복숭아 나무(2012) 기억의 조각들-특별출연(2012) 굿바이 싱글(2016)
+                      사랑하기 때문에(2017)
+                  </p>
+                </li>
+                <li class="drama">
+                  <h4>드라마</h4>
+                  <p>
+                      신들의 만찬(MBC, 2012)
+                      오자룡이 간다(MBC, 2012-2013) 불의 여신 정이(MBC, 2013) 드라마페스티벌-불온(MBC, 2013)
+                      제왕의 딸, 수백향(MBC, 2013-2014) 삼총사(tvN, 2014) 식샤를 합시다2(tvN, 2015)
+                      또 오해영(tvN, 2016) 낭만닥터 김사부(SBS, 2016-2017) 사랑의 온도(SBS, 2017)
+                      뷰티 인사이드(JTBC, 2018) 블랙독(tvN, 2019) 너는 나의 봄(2021,tvN)
+                  </p>
+                </li>
+                <li class="tv">
+                  <h4>TV</h4>
+                  <p>
+                      SNS 원정대-일단 띄워(SBS, 2014) 내 친구와 식샤를 합시다(tvN, 2015)
+                  </p>
+                </li>
+              </ul>
+            </div>
+                <!-- 여기까지 -->
+              </li>
+              <!-- 세번째 영역 -->
+              <li class="third_p">
+                <!-- 수상내역 -->
+                <div class="awards_list">
+                  <h3 class="ttl">
+                    수상내역
+                  </h3>
+                  <p class="awards_detail" >
+                      제53회 납세자의 날 모범 납세자 대통령 표창 (2019)<br>
+                      2017 그리메상 시상식 – 여자 최우수연기상(2017)<br>
+                      제53회 백상예술대상-TV 최우수연기상(2017)<br>
+                      SAF SBS 연기대상-우수연기상/10대 스타상/베스트 커플상(2016)<br>
+                      tvN10 AWARDS-로코퀸/Made in tvN<br>
+                      제5회 아시아태평양 스타어워즈 – 여자 우수상(2016)<br>
+                      코리아 드라마 어워즈 – 여자우수상(2013)<br>
+                      MBC 연기대상 – 연속극부문 여자우수연기상(2012)<br>
+                      MBC드라마대상 – 미니시리즈부문 여자신인상(2011)
+                  </p>             
+                </div>
+                <!-- 음악 -->
+                <div class="awards_list">
+                  <h3 class="ttl">
+                    음악
+                  </h3>
+                  <p class="awards_detail" >
+                      밀크 1집 ‘With freshness’(2001)<br>
+                      복숭아 나무 OST-십년이 백년이 지난 후에<br>
+                      제왕의 딸, 수백향 OST Part2-정읍사<br>
+                      식샤를 합시다2 OST Part3-UP&DOWN<br>
+                      또 오해영 OST Part3-사랑이 뭔데
+                  </p>             
+                </div>
+                <!-- 연극 -->
+                <div class="awards_list">
+                  <h3 class="ttl">
+                    연극
+                  </h3>
+                  <p class="awards_detail" >
+                      뮤지컬 사운드 오브 뮤직(2006) 궁(2010) 신데렐라(2015)
+                  </p>             
+                </div>
+              </li>
+            </ul>
+          </div>                
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-2] 아티스트 photo -->
+        <article id="art_photo">
+         <div id="photo_box">
+           <ul>
+            <li class="first">
+              <ul class="row1">
+                <li><a href="#"><img src="images/SeoHyunJin/34.png" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/35.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/36.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/27.jpg" alt=""></a></li>
+               </ul>
+               <ul class="row2">
+                 <li><a href="#"><img src="images/SeoHyunJin/5.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SeoHyunJin/6.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SeoHyunJin/7.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/SeoHyunJin/8.jpg" alt=""></a></li>
+               </ul>
+            </li>
+            <li class="second">
+             <ul class="row1">
+               <li><a href="#"><img src="images/SeoHyunJin/28.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/32.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/11.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/12.png" alt=""></a></li>
+              </ul>
+              <ul class="row2">
+                <li><a href="#"><img src="images/SeoHyunJin/13.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/14.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/29.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/16.jpg" alt=""></a></li>
+              </ul>
+            </li>
+            <li class="third">
+             <ul class="row1">
+               <li><a href="#"><img src="images/SeoHyunJin/17.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/30.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/19.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/SeoHyunJin/20.jpg" alt=""></a></li>
+              </ul>
+              <ul class="row2">
+                <li><a href="#"><img src="images/SeoHyunJin/21.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/22.png" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/31.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/SeoHyunJin/33.png" alt=""></a></li>
+              </ul>
+            </li>
+           </ul>
+         </div>
+         
+          <!-- 이전, 다음 버튼 -->
+          <a href="#" class="prev"
+            ><img src="images/photo_prev.png" alt=""
+          /></a>
+          <a href="#" class="next"
+            ><img src="images/photo_next.png" alt=""
+          /></a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-3] 아티스트 video -->
+        <article id="art_video">
+          <iframe
+            class="main_video"
+            width="740"
+            height="415"
+            src="https://www.youtube.com/embed/MaUdSzDSAbs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="allowfullscreen">
+         </iframe>
+          <ul class="video_opts">
+            <li>
+              <a href="#">
+                <iframe width="285" height="160" src="https://www.youtube.com/embed/UhuU01ouA9k?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <iframe width="285" height="160" src="https://www.youtube.com/embed/0ofxOQkPAwY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <iframe width="285" height="160" src="https://www.youtube.com/embed/wAXtzIO2JEo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </a>
+            </li>
+          </ul>
+          <!-- 유튜브 채널 링크 버튼 -->
+          <a href="https://www.youtube.com/c/MANAGEMENTSOOP" class="go_to_youtube">
+            <img src="images/youtube_link_btn.png" alt="" />
+            <p>More Videos</p>
+            <p>유튜브 채널 가기</p>
+          </a>
+        </article>
+      </div>
+      <div class="page loading">
+        <!-- [2-4] 아티스트 news -->
+        <article id="art_news">
+          <ul class="news_list">
+            <!-- 첫번째 기사 -->
+            <li class="first">
+              <a href="https://www.mk.co.kr/star/hot-issues/view/2021/09/890819/">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SeoHyunJin/7.jpg" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>서현진 출연확정, 안성기와 '카시오페아'서 호흡</h3>
+                 <p>
+                    배우 안성기 서현진이 ‘카시오페아’에 출연한다, 안성기와 서현진, 신연식 감독의 아름다운 만남을 화제를 모으고 있는 영화 ‘카시오페아’가 지난
+                    9일 크랭크인 하며 촬영에 돌입했다. ‘카시오페아’는 변호사, 엄마, 딸로 완벽한 삶을 살아가려고 노력하는 ‘수진’과 애틋한 아빠 ‘인우’의 삶
+                    한가운데 갑자기 찾아든...
+                </p>
+                  <span>2021.09.15</span>
+                </div>
+              </a>
+            </li>
+            <!-- 두번쨰 기사 -->
+            <li class="second">
+              <a href="https://sports.donga.com/article/all/20210816/108566552/1">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SeoHyunJin/article_2.jpg" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>서현진, ‘너는 나의 봄’ OST 가창…오늘(16일) 공개</h3>
+                  <p>
+                    tvN 월화드라마 ‘너는 나의 봄’ 주인공 다정 역을 맡아 출연 중인 배우 서현진이 직접 OST 가창에 나선다. 16일 ‘너는 나의 봄’ OST
+                    제작을 맡고 있는 마음C 측은 “가수 양다일이 불러 공개됐던 ‘너는 나의 봄’ OST Part 5 ‘낙화’가 서현진이 부른 다정이 버전으로 특별
+                    발매된다”고 밝혔다...
+                 </p>
+                  <span>2021.08.16</span>
+                </div>
+              </a>
+            </li>
+            <!-- 세번쨰 기사 -->
+            <li class="third">
+              <a href="https://newsis.com/view/?id=NISX20210719_0001518593&cID=10601&pID=10600">
+                <!-- 기사사진 -->
+                <div class="thumb">
+                  <img src="images/SeoHyunJin/article_3.PNG" alt="" />
+                </div>
+                <!-- 기사내용 -->
+                <div class="news_letter">
+                  <h3>서현진, 광고 촬영 현장 꽃받침 포즈…"눈부셔"</h3>
+                  <p>
+                        배우 서현진의 광고 촬영현장 비하인드 컷이 공개됐다. 19일 서현진의 소속사 매니지먼트 숲은 공식 인스타그램
+                        계정에 "아이구 오늘 월요일이네 #월화요정 #현진 보는 날 오늘 밤 9시도 #너나봄 하세요"라는 글과 함께 사진을 올렸다. 사진에서 서현진은
+                        광고 촬영을 하고 있다. 이를 본 네티즌은...
+                 </p>
+                  <span>2021.07.19</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
+      
+      </section>
+    </div>
+      <!-- 컨텐츠 퀵메뉴 (오른쪽 고정)-->
+      <ul id="art_quick_mn">
+        <li><a href="#">
+          <div></div> 
+          <span>PROFILE</span>                  
+        </a></li>
+        <li><a href="#">
+          <div></div>
+          <span>PHOTO</span>           
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>VIDEO</span>          
+        </a></li>
+        <li><a href="#">
+          <div></div> 
+          <span>NEWS</span>       
+        </a></li>
+      </ul>
+    
+    
+  </div>
+    <script>
+      //현재 움직이는 상황 여부 점검하는 변수
+      var moving =false;
+      //현재 카테고리 번호를 나타내는 변수
+      var num = 0;
+
+      function doLayout() {
+          var t = window.innerHeight * -1 * num;
+
+          $("#main").css({top:t+"px"});
+          $("#main .page").css({width:window.innerWidth, height:window.innerHeight}).removeClass("loading");
+      }
+
+      $(document).ready(function(){
+          doLayout();
+
+          $("#art_quick_mn li").eq(num).find("div").addClass("on");
+          $("#art_quick_mn li").eq(num).find("span").addClass("on");
+
+          $("#main").mousewheel(function(e){
+              if(!moving){
+                  moving=true;
+                  var t = $(this).offset().top;
+                  var h = window.innerHeight;
+                  if(e.deltaY == -1){
+                    //위로 휠
+                      if(num < 3) {
+                        if(num == 1) {
+
+                        }
+                          num += 1;
+                          t-=h;
+                      }
+                  } else if(e.deltaY == 1) {
+                    //아래로 휠
+                      if(num > 0) {
+                          num -= 1;
+                          t+=h;
+                      }
+                  }
+
+                  $("#main").animate({top:t+"px"}, 500, function() {
+                    moving=false;
+                    $("#art_quick_mn div").removeClass("on");
+                    $("#art_quick_mn span").removeClass("on");
+                    $("#art_quick_mn li").eq(num).find("div").addClass("on");                 
+                    $("#art_quick_mn li").eq(num).find("span").addClass("on");
+                  });
+              }
+          });
+
+      });
+      
+          // 메뉴움직임
+    console.clear();
+
+const nav = document.querySelector("nav");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = [...document.querySelectorAll(".link")];
+const menuBtn = document.querySelector(".menu-btn");
+const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+function createHoverEl() {
+  let hoverEl = document.createElement("div");
+  hoverEl.className = "hover-el";
+  hoverEl.style.setProperty("--y", "0px");
+  hoverEl.style.setProperty("--mousex", "0px");
+  hoverEl.style.setProperty("--mousey", "0px");
+  navLinksContainer.appendChild(hoverEl);
+}
+createHoverEl();
+
+navLinks.forEach((link, index) => {
+  let hoverEl = navLinksContainer.querySelector(".hover-el");
+  link.style.setProperty("--delay", `${index * 50}ms`);
+  link.addEventListener("mousemove", function(e) {
+    hoverEl.style.setProperty("--y", `${index * 60}px`);
+    hoverEl.style.setProperty("opacity", "1");
+    hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+    hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+  });
+  navLinksContainer.addEventListener("mouseout", function() {
+    hoverEl.style.setProperty("opacity", "0");
+  });
+  link.addEventListener("click", function() {
+    let hoverEl = navLinksContainer.querySelector(".hover-el");
+    hoverEl.style.opacity = '0';
+    toggleSubmenu(link);
+  });
+});
+
+menuBtn.addEventListener("click", function() {
+  nav.classList.toggle("nav-open");
+  menuBtn.classList.toggle("close");
+});
+subMenuBtn.addEventListener("click", function() {
+  nav.classList.toggle("sub-menu-open");
+  removeSubmenu();
+});
+
+function toggleSubmenu(el) {
+  let subMenu = nav.querySelector(".sub-menu");
+  if (el.children[1]) {
+    createSubmenu(el);
+  } else if (nav.contains(subMenu)) {
+    removeSubmenu();
+  } else {
+    return;
+  }
+}
+
+function createSubmenu(el) {
+  let subMenuContainer = document.createElement("div");
+  subMenuContainer.className = "sub-menu";
+  let subMenuItem = el.children[1].cloneNode(true);
+  let subMenuItemList = [...subMenuItem.children];
+  subMenuItemList.forEach((item, index) => {
+    item.classList.add("off-menu");
+    item.style.setProperty("--delay", `${index * 40}ms`);
+  });
+  nav.classList.toggle("sub-menu-open");
+  nav.appendChild(subMenuContainer);
+  subMenuContainer.appendChild(subMenuItem);
+  setTimeout(function() {
+    subMenuItemList.forEach(item => {
+      item.classList.remove("off-menu");
+      item.classList.add("on-menu");
+    });
+  }, 200);
+}
+function removeSubmenu() {
+  let subMenu = nav.querySelector(".sub-menu");
+  let subMenuItemList = [...subMenu.children[0].children];
+  if (nav.contains(subMenu)) {
+    subMenuItemList.forEach(item => {
+      item.classList.add("off-menu");
+      item.classList.remove("on-menu");
+    });
+    setTimeout(function() {
+      nav.removeChild(subMenu);
+    }, 500);
+  }
+}
+    </script>
+    
+
+  </body>
+</html>

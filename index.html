@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Soop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
+    <script src="http://fatlinesofcode.github.io/jquery.smoothwheel/src/jquery.smoothwheel.js"></script>
+
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- [1] 헤더 -->
+      <header id="header">
+        <div class="mn_container">
+          <a href="#" class="nav_mn">
+            <!-- <img src="images/navmn_open.png" alt=""/> -->
+          </a>
+          <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+          <div class="language">
+            <a href="login.html"><span>Login&nbsp;&nbsp;|</span></a>
+            <a href="join_1.html"><span>Join&nbsp;</span></a>
+          </div>
+        </div>
+      </header>
+      <!-- 메뉴 -->
+      <nav>
+        <div class="menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+          <div class="line line__3"></div>
+        </div>
+      
+        <div class="sub-menu-btn">
+          <div class="line line__1"></div>
+          <div class="line line__2"></div>
+        </div>
+      
+        <ul class="nav-links">
+          <li class="link">
+            <a href="index.html">Main</a>
+          </li>
+          <li class="link">
+            <a href="Introduce.html">Company</a>
+          </li>
+          <li class="link">
+            <a href="#">Artist</a>
+            <ol>
+              <li><a href="artist_detail_gy.html">공유</a></li>
+              <li><a href="#">공효진</a></li>
+              <li><a href="#">김재욱</a></li>
+              <li><a href="artist_detail_shj.html">서현진</a></li>
+              <li><a href="#">이천희</a></li>
+              <li><a href="#">전도연</a></li>
+              <li><a href="#">정유미</a></li>
+              <li><a href="#">남지현</a></li>
+              <li><a href="#">최우식</a></li>
+              <li><a href="artist_detail_bsz.html">수지</a></li>
+              <li><a href="#">남주혁</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">Community</a>
+            <ol>
+              <li><a href="NewsNotice.html">News & Notice</a></li>
+              <li><a href="works.html">Works</a></li>
+            </ol>
+          </li>
+          <li class="link">
+            <a href="#">SNS</a>
+            <ol>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/soopent">
+                  Facebook <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/management_soop/">
+                  Instagram <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/channel/UCPWLltIuHLCws1-O3B4ADtg">
+                  Youtube <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.vlive.tv/channel/EBE269">
+                  Vlive <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://tv.naver.com/soopent">
+                  Naver Tv <i class="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li class="link">
+          </li>
+          <li class="link">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="link">
+            <a href="join_1.html">Join</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- [2] 메인화면 -->
+      <section id="main">
+        <!-- (1) 현재 화면에 보이는 아티스트 사진 영역 -->
+        <div class="artist_container">
+          <!-- (2) 아티스트 사진 전체 -->
+          <ul class="artist_img">
+            <!-- (3) 각각 아티스트 사진 -->
+            <li onclick="location.href='artist_detail_gy.html'"><a></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a onclick="location.href='artist_detail_shj.html'"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a onclick="location.href='artist_detail_bsz.html'"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- [3] 푸터 -->
+      <footer id="footer">
+        <ul class="com_info">
+          <li>
+            서울 강남구 학동로50길 27 (논현동 242-35) 27, Hakdong-ro 50-gil,
+            Gangnam-gu, Seoul, Republic of Korea
+          </li>
+          <li>Fax : 02.543.0061 | msoop04@naver.com</li>
+          <li>
+            COPYRIGHT ⓒ 2013 ~ 2021 MANAGEMENT SOOP CORP. ALL RIGHTS RESERVED. |
+            CREATED BY PURPLE&COMPANY
+          </li>
+        </ul>
+        <ul class="logo_group">
+          <li>
+            <a href="#" class="main_logo"
+              ><img src="images/logo.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="kakao_logo"
+              ><img src="images/logo_kakao.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </footer>
+      <!-- 접속시레이어팝업 -->
+      <div id="modal">
+        <div class="modal_content">
+          <button type="button" id="modal_close_btn">X 닫기</button>
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/ZJsmxvtoeUc?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="modal_layer"></div>
+    </div>
+    </div>
+  </body>
+  <script>
+    $(".nav_mn").click(function() { 
+      $("#menu").addClass("open"); 
+    }); 
+    $(".nav_close").click(function() { 
+      $("#menu").removeClass("open"); 
+    });
+
+    scrollVert();
+    var scrollLeft=0;
+
+    function scrollVert() {
+      $('html, body, *').off('mousewheel').mousewheel(function(e, delta) {
+        this.scrollTop -= (delta * 40);
+        e.preventDefault();
+        setTimeout(function() {
+          if ($(window).scrollTop() + $(window).height() == $(document).height())
+            scrollHoriz();
+        }, 0)
+      });
+    }
+
+    function scrollHoriz() {
+      $('html, body, *').off('mousewheel').mousewheel(function(e, delta) {
+        this.scrollLeft -= (delta * 40);
+        e.preventDefault();
+        scrollLeft=this.scrollLeft
+        setTimeout(function() {
+          if (scrollLeft == 0) scrollVert();
+        }, 0)
+      });
+    }
+
+    $(document).ready(function () {
+        //$(".submm").hide(); //초기값 설정
+        $(".subMenu").css({ display: "none" }); //초기값 설정
+
+        $(".menuBtn > li").hover(
+          function () {
+            //$(this).find(".submm").show();
+            //$(this).find(".submm").slideDown();
+            $(this).find(".subMenu").fadeIn(600);
+          },
+          function () {
+            //$(".submm").hide();
+            $(".subMenu").each(function () {
+              if ($(this).css({ display: "block" })) {
+                $(this).hide();
+              }
+            });
+          }
+        );
+      });
+   
+     $("#modal_close_btn").click(function(){
+        $("#modal").attr("style", "display:none");
+    });    
+
+    // 메뉴움직임
+    console.clear();
+
+const nav = document.querySelector("nav");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = [...document.querySelectorAll(".link")];
+const menuBtn = document.querySelector(".menu-btn");
+const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+function createHoverEl() {
+  let hoverEl = document.createElement("div");
+  hoverEl.className = "hover-el";
+  hoverEl.style.setProperty("--y", "0px");
+  hoverEl.style.setProperty("--mousex", "0px");
+  hoverEl.style.setProperty("--mousey", "0px");
+  navLinksContainer.appendChild(hoverEl);
+}
+createHoverEl();
+
+navLinks.forEach((link, index) => {
+  let hoverEl = navLinksContainer.querySelector(".hover-el");
+  link.style.setProperty("--delay", `${index * 50}ms`);
+  link.addEventListener("mousemove", function(e) {
+    hoverEl.style.setProperty("--y", `${index * 60}px`);
+    hoverEl.style.setProperty("opacity", "1");
+    hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+    hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+  });
+  navLinksContainer.addEventListener("mouseout", function() {
+    hoverEl.style.setProperty("opacity", "0");
+  });
+  link.addEventListener("click", function() {
+    let hoverEl = navLinksContainer.querySelector(".hover-el");
+    hoverEl.style.opacity = '0';
+    toggleSubmenu(link);
+  });
+});
+
+menuBtn.addEventListener("click", function() {
+  nav.classList.toggle("nav-open");
+  menuBtn.classList.toggle("close");
+});
+subMenuBtn.addEventListener("click", function() {
+  nav.classList.toggle("sub-menu-open");
+  removeSubmenu();
+});
+
+function toggleSubmenu(el) {
+  let subMenu = nav.querySelector(".sub-menu");
+  if (el.children[1]) {
+    createSubmenu(el);
+  } else if (nav.contains(subMenu)) {
+    removeSubmenu();
+  } else {
+    return;
+  }
+}
+
+function createSubmenu(el) {
+  let subMenuContainer = document.createElement("div");
+  subMenuContainer.className = "sub-menu";
+  let subMenuItem = el.children[1].cloneNode(true);
+  let subMenuItemList = [...subMenuItem.children];
+  subMenuItemList.forEach((item, index) => {
+    item.classList.add("off-menu");
+    item.style.setProperty("--delay", `${index * 40}ms`);
+  });
+  nav.classList.toggle("sub-menu-open");
+  nav.appendChild(subMenuContainer);
+  subMenuContainer.appendChild(subMenuItem);
+  setTimeout(function() {
+    subMenuItemList.forEach(item => {
+      item.classList.remove("off-menu");
+      item.classList.add("on-menu");
+    });
+  }, 200);
+}
+function removeSubmenu() {
+  let subMenu = nav.querySelector(".sub-menu");
+  let subMenuItemList = [...subMenu.children[0].children];
+  if (nav.contains(subMenu)) {
+    subMenuItemList.forEach(item => {
+      item.classList.add("off-menu");
+      item.classList.remove("on-menu");
+    });
+    setTimeout(function() {
+      nav.removeChild(subMenu);
+    }, 500);
+  }
+}
+  </script>
+</html>
