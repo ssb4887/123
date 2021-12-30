@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+/* 기본 폰트 */
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+/* 언어선택 폰트 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+.kopubbatang * {
+  font-family: "KoPub Batang", serif;
+}
+#wrap {
+  width: 100%;
+}
+/* [1] 헤더 */
+#header {
+  position: fixed;
+  width: 100%;
+  height: 114px;
+  backdrop-filter: blur(2px);
+}
+/* (1) 메뉴, 로고 감싸는 컨테이너 */
+.mn_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* (1-1) 네비 메뉴 버튼 */
+.mn_container .nav_mn {
+  float: left;
+  margin: 40px 0 0 48px;
+}
+/* (1-2) 로고 */
+.mn_container .logo {
+  position: absolute;
+  left: 50%;
+  margin: 30px 0 0 -73px;
+}
+/* (1-3) 언어선택 */
+.mn_container .language {
+  float: right;
+  margin: 31px 48px 0 0;
+}
+.mn_container .language span {
+  font-size: 15px;
+  line-height: 23px;
+  color: #101010;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+/* 메뉴 */
+nav {
+  position: fixed;
+  --transition-time: 500ms;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(20px);
+  transform: translateX(-100%);
+  transition: all 800ms cubic-bezier(0.8, 0, 0.33, 1);
+  z-index: 4;
+}
+nav a {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-decoration: none;
+  user-select: none;
+  color: #fff;
+  font-family: 'Pretendard-ExtraBold';
+}
+nav .nav-links {
+  --link-height: 60px;
+  position: relative;
+  width: 100%;
+}
+nav .nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: var(--link-height);
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all var(--transition-time) cubic-bezier(0.8, 0, 0.33, 0.9);
+  transition-delay: calc(30ms + var(--delay));
+  cursor: pointer;
+  z-index: 8;
+}
+nav .nav-links li:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+nav .nav-links li a {
+  /* pointer-events: none; */
+  z-index: 9;
+}
+nav .nav-links li ol {
+  display: none;
+}
+nav .nav-links .hover-el {
+  position: absolute;
+  width: 100%;
+  height: var(--link-height);
+  top: var(--y);
+  left: var(--x);
+  opacity: 0;
+  background: radial-gradient(circle at var(--mousex) var(--mousey), rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%);
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  pointer-events: none;
+  z-index: 5;
+}
+nav .sub-menu {
+  --link-height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+nav .sub-menu ol {
+  list-style: none;
+}
+nav .sub-menu ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--link-height);
+  transition: all var(--transition-time) ease;
+  transition-delay: calc(30ms + var(--delay));
+  cursor: pointer;
+}
+nav .sub-menu ol li:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+nav .sub-menu ol li.off-menu {
+  opacity: 0;
+  transform: translateY(30%);
+}
+nav .sub-menu ol li.on-menu {
+  opacity: 1;
+  transform: translateY(0%);
+}
+nav .sub-menu ol li a {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+nav .sub-menu-btn {
+  --icon-width: 40px;
+  position: absolute;
+  top: 2.5%;
+  left: 10%;
+  width: var(--icon-width);
+  height: var(--icon-width);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all var(--transition-time) cubic-bezier(0.8, 0, 0.33, 1.25);
+  cursor: pointer;
+  z-index: 8;
+  pointer-events: none;
+}
+nav .sub-menu-btn .line {
+  width: calc(var(--icon-width) - 28px);
+  height: 2px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 12px 10px;
+}
+nav .sub-menu-btn .line__1 {
+  transform-origin: left;
+  transform: rotate(-35deg) translate(-1px, 8px);
+}
+nav .sub-menu-btn .line__2 {
+  transform-origin: left;
+  transform: rotate(35deg) translate(-1px, -8px);
+}
+nav .menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --icon-width: 25px;
+  position: absolute;
+  top: 2.5%;
+  right: -15%;
+  width: calc(var(--icon-width) + 25px);
+  height: calc(var(--icon-width) + 25px);
+  flex-direction: column;
+  transition: all calc(100ms + var(--transition-time)) cubic-bezier(0.8, 0, 0.33, 1.25);
+  cursor: pointer;
+  z-index: 10;
+}
+nav .menu-btn.close .line__1 {
+  transform: rotate(45deg) translate(2px, -3px);
+}
+nav .menu-btn.close .line__2 {
+  transform: rotate(-45deg);
+}
+nav .menu-btn.close .line__3 {
+  transform: rotate(45deg) translate(-2px, 3px);
+}
+nav .menu-btn .line {
+  width: var(--icon-width);
+  background: rgb(0, 0, 0);
+  height: 2px;
+  margin: 3px 0;
+  transition: all calc(var(--transition-time) + 100ms) cubic-bezier(0.9, 0, 0.33, 1);
+}
+nav .menu-btn .line__1 {
+  width: var(--icon-width);
+  transform-origin: left;
+}
+nav .menu-btn .line__2 {
+  width: var(--icon-width);
+  transform-origin: center;
+}
+nav .menu-btn .line__3 {
+  width: var(--icon-width);
+  transform-origin: right;
+}
+nav.nav-open {
+  transform: translateX(0%);
+}
+nav.nav-open .menu-btn {
+  right: 10%;
+}
+nav.nav-open .nav-links li {
+  transform: translateX(0);
+  opacity: 1;
+}
+nav.sub-menu-open .sub-menu-btn {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+nav.sub-menu-open .nav-links li {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10%);
+}
+nav.sub-menu-open .nav-links .hover-el {
+  opacity: 0;
+}
+/* (1) 메뉴, 로고 감싸는 컨테이너 */
+.mn_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* (1-1) 네비 메뉴 버튼 */
+.mn_container .nav_mn {
+  float: left;
+  margin: 40px 0 0 48px;
+}
+/* (1-2) 로고 */
+.mn_container .logo {
+  position: absolute;
+  left: 50%;
+  margin: 30px 0 0 -73px;
+}
+/* (1-3) 언어선택 */
+.mn_container .language {
+  float: right;
+  margin: 31px 48px 0 0;
+}
+.mn_container .language span {
+  font-size: 15px;
+  line-height: 23px;
+  color: #101010;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+/* [2] 메인화면 */
+#join {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-color: #eaeeeb;
+}
+/* [2-0] 고정된 배경 */
+#join .bg_img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background: url(../images/bg_temp2.jpg) no-repeat 50% 0; */
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+/* 약관동의, 회원정보, 가입완료 공통 스타일 */
+#join article {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 930px;
+  height: 575px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #00000066;
+  border-radius: 10px;
+  position: relative;
+}
+/* (1) 정보입력 하는 부분 */
+/* 입력칸 스타일 초기화 */
+.form_group input,
+.form_group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+/* 회원가입 폼 전체 감싸는 틀 */
+#user_info form {
+  width: 590px;
+  height: 400px;
+  position: absolute;
+  top: 75px;
+  left: 90px;
+}
+/* 입력폼 각각 라인의 영역 크기 */
+#user_info form .form_group {
+  width: 100%;
+  height: 55px;
+}
+/* 입력폼 라벨 크기 */
+#user_info form .form_group h3 {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 40px;
+  font-family: 'Pretendard-Regular';
+  font-size: 18px;
+  line-height: 40px;
+  color: #2e2d2d;
+}
+/* 입력폼 입력칸 크기 */
+#user_info input#userId,
+#user_info input#userPw,
+#user_info input#userPw_check,
+#user_info input#userName,
+#user_info input#userEmail {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #858585;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: 'Pretendard-Regular';
+  font-size: 13px;
+  line-height: 40px;
+  color: 858585;
+  padding-left: 10px;  
+}
+
+
+/* 중복체크 버튼 */
+#user_info form .form_group button {
+  display: block;
+  float: right;
+  width: 15%;
+  margin-right: 5%;
+  height: 40px;
+  background: #82a47e 0% 0% no-repeat padding-box;
+  border: 1px solid #82a47e;
+  border-radius: 26px;
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  line-height: 40px;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* 전화번호 입력칸 크기 다르게 */
+#user_info .telnum_wrap {
+  float: left;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#user_info .telnum_wrap > select,
+#user_info .telnum_wrap > input {
+  width: 80px;
+  height: 100%;
+  border: 1px solid #858585;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+select {
+  padding: .6em .5em;
+  font-family: "Pretendard-Regular";
+  font-size: 15px;
+  color: rgba(46, 45, 45, 1);
+  background: url(../images/dropdown_icon.png) no-repeat 90% 50%;
+  border-radius: 0px;
+  }
+/* 전화번호 사이 - 표시 */
+#user_info .telnum_wrap > span {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 30px;
+  padding-top: 10px;
+  line-height: 100%;
+  text-align: center;
+}
+/* 입력폼 입력칸 포커스 */
+#user_info form .form_group input:focus {
+  border: 3px solid #82a47e;
+  box-sizing: border-box;
+}
+/* 문자수신 동의 */
+#user_info form .radio_group {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+#user_info form .radio_group h3 {
+  display: block;
+  float: left;
+  font-family: 'Pretendard-Light';
+  font-size: 16px;
+  line-height: 30px;
+  margin-right: 10px;
+}
+/* 라디오버튼 크기 */
+input#agree_y,
+input#agree_n {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 1px;
+}
+/* 라디오버튼 라벨 */
+.radio_group label:first-child {
+  margin-right: 5px;
+}
+/* .radio_group label.agree_btn {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Pretendard-Light';
+  text-align: center;
+} */
+/* (2) 회원가입 완료 버튼 */
+#user_info .next_btn {
+  width: 140px;
+  height: 50px;
+  background-color: #82a47e;
+  border: 1px solid #82a47e;
+  border-radius: 9px;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  margin-left: -70px;
+  cursor: pointer;
+  font-family: 'Pretendard-SemiBold';
+  font-size: 25px;
+  line-height: 100%;
+  color: #f8f5f5
+}
+
+/* (3) 회원가입 진행 단계 표시 */
+#join_process {
+  width: 155px;
+  height: 170px;
+  position: absolute;
+  top: 190px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 4000;
+}
+#join_process li {
+  width: 100%;
+  height: 20px;
+}
+#join_process li .process_icon {
+  float: left;
+  width: 14px;
+  height: 14px;
+  margin: 2px 15px 2px 0;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #858585;
+}
+#join_process li .process_icon.now {
+  background-color: #82a47e;
+  border: 1px solid #82a47e;
+}
+#join_process li span {
+  float: left;
+  font-family: 'Pretendard-Regular';
+  font-size: 17px;
+  line-height: 20px;
+  color: #858585;
+  vertical-align: center;
+}
+#join_process li span.now {
+  color: #2e2d2d;
+}
+/* 단계 잇는 선 */
+.process_line {
+  width: 0.8px;
+  height: 160px;
+  background-color: #afafaf;
+  opacity: 0.7;
+  position: absolute;
+  top: 195px;
+  right: 196.5px;
+  z-index: 2000;
+}
